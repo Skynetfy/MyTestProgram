@@ -1,0 +1,12 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\Ioc.Data.NHibernate.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\Ioc.Data.NHibernate.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\Iesi.Collections.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\Ioc.Domain.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\NHibernate.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\Ioc.Domain.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\Iesi.Collections.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\NHibernate.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\obj\Debug\Ioc.Data.NHibernate.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\obj\Debug\Ioc.Data.NHibernate.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\obj\Debug\Ioc.Data.NHibernate.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data.NHibernate\bin\Debug\Mappings\UserProfile.hbm.xml

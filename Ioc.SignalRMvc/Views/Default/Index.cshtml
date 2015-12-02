@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+</head>
+<body>
+    <h1>Echo service</h1>
+    <div>
+        <input type="text" id="text" />
+        <button id="send">Send</button>
+    </div>
+    <script>
+        $(function () {
+            var connection = $.connection("/echo");
+            connection.logging = true;
+            connection.received(function (data) {
+                $("body").append(data + "<br />");
+            });
+            connection.error(function (err) {
+                alert("存在一个错误. \n" +
+                            "Error: " + err.message);
+            });
+            connection.start().done(function () {
+                $("#send").click(function () {
+                    connection.send($("#text").val());
+                    $("#text").val("").focus();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

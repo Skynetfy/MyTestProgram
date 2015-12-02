@@ -1,0 +1,26 @@
+2015-09-02 10:58:58.1524 Ioc.WebUI.Controllers.TestController Debuging Info.
+2015-09-02 10:58:58.6804 Ioc.WebUI.Controllers.TestController Info Info
+2015-09-02 10:58:59.4094 Ioc.WebUI.Controllers.TestController Warn Info
+2015-09-02 10:58:59.8305 Ioc.WebUI.Controllers.TestController Fatel Info
+2015-09-02 10:59:00.5235 Ioc.WebUI.Controllers.TestController Error Message
+2015-09-02 11:01:46.4240 Ioc.WebUI.Controllers.UserController System.Data.Entity.Core.MetadataException: Schema specified is not valid. Errors: 
+The mapping of CLR type to EDM type is ambiguous because multiple CLR types match the EDM type 'User'. Previously found CLR type 'Ioc.WebUI.Models.User', newly found CLR type 'Ioc.Core.Data.User'.
+The mapping of CLR type to EDM type is ambiguous because multiple CLR types match the EDM type 'UserProfile'. Previously found CLR type 'Ioc.WebUI.Models.UserProfile', newly found CLR type 'Ioc.Core.Data.UserProfile'.
+   ? System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache(Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   ? System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.ExplicitLoadFromAssembly(Assembly assembly, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
+   ? System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ExplicitLoadFromAssembly(Assembly assembly, ObjectItemCollection collection, Action`1 logLoadMessage)
+   ? System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly, Action`1 logLoadMessage)
+   ? System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(Assembly assembly)
+   ? System.Data.Entity.Internal.InternalContext.TryUpdateEntitySetMappingsForType(Type entityType)
+   ? System.Data.Entity.Internal.InternalContext.UpdateEntitySetMappingsForType(Type entityType)
+   ? System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   ? System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   ? System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   ? System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   ? System.Linq.Queryable.Select[TSource,TResult](IQueryable`1 source, Expression`1 selector)
+   ? Ioc.WebUI.Controllers.UserController.Index() ?? e:\work\Hangfire_service\HangfireService.Pro\Ioc.WebUI\Controllers\UserController.cs:?? 44
+2015-09-02 16:08:48.2847 HZLogger.NLogWrapper.HZLogger Debuging Info.
+2015-09-02 16:08:49.8758 HZLogger.NLogWrapper.HZLogger Info Info
+2015-09-02 16:08:50.5298 HZLogger.NLogWrapper.HZLogger Warn Info
+2015-09-02 16:08:50.7608 HZLogger.NLogWrapper.HZLogger Fatel Info
+2015-09-02 16:08:51.0478 HZLogger.NLogWrapper.HZLogger Error Message

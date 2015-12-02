@@ -1,0 +1,6 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App1\bin\Debug\Ioc.Spring.Net.App1.exe.config
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App1\bin\Debug\Ioc.Spring.Net.App1.exe
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App1\bin\Debug\Ioc.Spring.Net.App1.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App1\obj\Debug\Ioc.Spring.Net.App1.exe
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App1\obj\Debug\Ioc.Spring.Net.App1.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App1\obj\Debug\Ioc.Spring.Net.App1.csprojResolveAssemblyReference.cache

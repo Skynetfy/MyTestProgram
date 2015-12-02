@@ -1,0 +1,8 @@
+2015-09-04 10:28:51.9662 HZLogger.NLogWrapper.HZLogger ??1701d600-e478-4c81-b467-0f8dc2f38360???
+2015-09-04 10:36:45.0242 HZLogger.NLogWrapper.HZLogger 1701d600-e478-4c81-b467-0f8dc2f38360>> holle wold
+2015-09-04 10:37:09.0146 HZLogger.NLogWrapper.HZLogger ??3fcddd00-a72c-442a-ace6-76d3fe48c3f8???
+2015-09-04 10:37:18.9872 HZLogger.NLogWrapper.HZLogger ??3fcddd00-a72c-442a-ace6-76d3fe48c3f8???
+2015-09-04 10:53:58.1983 HZLogger.NLogWrapper.HZLogger ??fa98eec6-7f88-4b2f-9f86-e6d22adefa9d???
+2015-09-04 10:54:40.2507 HZLogger.NLogWrapper.HZLogger ??fa98eec6-7f88-4b2f-9f86-e6d22adefa9d???
+2015-09-04 10:54:40.3947 HZLogger.NLogWrapper.HZLogger ??8d70b13e-8b64-4fad-bed6-3d3c16dcaa6d???
+2015-09-04 10:55:20.5930 HZLogger.NLogWrapper.HZLogger 8d70b13e-8b64-4fad-bed6-3d3c16dcaa6d>> 123

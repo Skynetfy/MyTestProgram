@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.net
+        http://www.springframework.net/xsd/spring-objects.xsd">
+
+  <object id="PersonDao" type="Ioc.Spring.Net.App1.PersonDao, Ioc.Spring.Net.App1">
+
+  </object>
+  <!--构造器-->
+  <object id="personDao" type="Ioc.Spring.Net.App1.PersonDao, Ioc.Spring.Net.App1" singleton="false"/>
+  <!--嵌套类型-->
+  <object id="person" type="Ioc.Spring.Net.App1.PersonDao+Person, Ioc.Spring.Net.App1"/>
+  <!--静态工厂-->
+  <object id="staticObjectsFactory" type="Ioc.Spring.Net.App1.StaticObjectsFactory, Ioc.Spring.Net.App1" factory-method="CreateInstance"/>
+  <!-- 实例工厂 -->
+  <object id="instanceObjectsFactory" type="Ioc.Spring.Net.App1.InstanceObjectsFactory, Ioc.Spring.Net.App1" />
+  <!--工厂-->
+  <object id="instancePersonDao" factory-method="CreateInstance" factory-object="instanceObjectsFactory" />
+  <!--创建的对象-->
+  <!-- 泛型类型 GenericClass<int> -->
+  <object id="genericClass" type="Ioc.Spring.Net.App1.GenericClass&lt;int>, Ioc.Spring.Net.App1" />
+
+
+  <object id="computer" type="Ioc.Spring.Net.App1.Computer, Ioc.Spring.Net.App1" />
+
+  <object id="modernPerson" type="Ioc.Spring.Net.App1.ModernPerson, Ioc.Spring.Net.App1">
+    <!--<property name="Tool" ref="computer"/>-->
+    <property name="Tool">
+      <object type="Ioc.Spring.Net.App1.Computer, Ioc.Spring.Net.App1"></object>
+    </property>
+    <!--构造函数注入-->
+    <!--<constructor-arg name="argPerson" ref="person"/>
+    <constructor-arg name="intProp" value="1"/>-->
+  </object>
+  <object id="Friend" type="Ioc.Spring.Net.App1.Friend, Ioc.Spring.Net.App1">
+
+
+    <!--空集合属性-->
+    <property name="BestFriends">
+      <null/>
+    </property>
+
+    <!--System.Collections.IList注入 -->
+    <property name="HappyYears">
+      <list>
+        <value>1992</value>
+        <value>1998 年</value>
+        <ref object="oneYear"/>
+      </list>
+    </property>
+
+    <!--System.Collections.IList<int>注入 -->
+    <property name="Years">
+      <list element-type="int">
+        <value>1992</value>
+        <value>1998</value>
+        <value>2000</value>
+      </list>
+    </property>
+
+    <!--System.Collections.IDictionary注入-->
+    <property name="HappyDic">
+      <dictionary key-type="string" value-type="object">
+        <entry key="第一开心" value="每天都能睡一个好觉"/>
+        <entry key="第二开心" value-ref="happy"/>
+      </dictionary>
+    </property>
+
+    <!--System.Collections.IDictionary<object,object>注入-->
+    <property name="HappyTimes">
+      <dictionary key-type="string" value-type="object">
+        <entry key="第一开心" value="每天都能睡一个好觉"/>
+        <entry key="第二开心" value-ref="happy"/>
+      </dictionary>
+    </property>
+
+  </object>
+
+  <object id="oneYear" type="Ioc.Spring.Net.App1.OneYear,Ioc.Spring.Net.App1"/>
+
+  <object id="happy" type="Ioc.Spring.Net.App1.Happy,Ioc.Spring.Net.App1"/>
+  
+  
+  <object id="student" type="Ioc.Spring.Net.App1.Student,Ioc.Spring.Net.App1">
+    <!--属性值类型注入-->
+    <property name="Name" value="Liu Dong"/>
+    <property name="Age" value="27"/>
+  </object>
+
+  <object id="studentDao" type="Ioc.Spring.Net.App1.StudentDao,Ioc.Spring.Net.App1">
+    <!--构造器注入-->
+    <constructor-arg name="intProp" value="1"/>
+
+    <property name="Entity" ref="student" />
+    
+  </object>
+  <!--事件注入-->
+  <object id="men" type="Ioc.Spring.Net.App1.Men, Ioc.Spring.Net.App1">
+    <listener event="OpenTheDoor" method="OpenThisDoor">
+      <ref object="door"/>
+    </listener>
+  </object>
+  <object id="door" type="Ioc.Spring.Net.App1.Door, Ioc.Spring.Net.App1" />
+</objects>

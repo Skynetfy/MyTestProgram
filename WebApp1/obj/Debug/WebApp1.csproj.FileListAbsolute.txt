@@ -1,0 +1,10 @@
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\bin\WebApp1.dll.config
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\bin\WebApp1.dll
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\bin\WebApp1.pdb
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\bin\Contracts.dll
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\bin\Services.dll
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\bin\Contracts.pdb
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\bin\Services.pdb
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\obj\Debug\WebApp1.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\obj\Debug\WebApp1.dll
+E:\work\Hangfire_service\HangfireService.Pro\WebApp1\obj\Debug\WebApp1.pdb

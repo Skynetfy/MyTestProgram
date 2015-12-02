@@ -1,0 +1,12 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\Ioc.Data.dll.config
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\Ioc.Data.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\Ioc.Data.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\EntityFramework.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\Ioc.Core.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\Ioc.Core.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\EntityFramework.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\obj\Debug\Ioc.Data.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\obj\Debug\Ioc.Data.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Data\obj\Debug\Ioc.Data.pdb

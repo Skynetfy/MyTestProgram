@@ -1,0 +1,10 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\bin\Debug\Ioc.Domain.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\bin\Debug\Ioc.Domain.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\obj\Debug\Ioc.Domain.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\obj\Debug\Ioc.Domain.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\obj\Debug\Ioc.Domain.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\bin\Debug\Mappings\UserProfile.hbm.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\bin\Debug\Iesi.Collections.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\bin\Debug\NHibernate.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\bin\Debug\Iesi.Collections.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Domain\bin\Debug\NHibernate.xml

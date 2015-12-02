@@ -1,0 +1,17 @@
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\CacheLibrary.dll
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\CacheLibrary.pdb
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Couchbase.dll
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Enyim.Caching.dll
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Hammock.ClientProfile.dll
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Hammock.dll
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Newtonsoft.Json.dll
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Couchbase.xml
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Enyim.Caching.pdb
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Enyim.Caching.xml
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Hammock.pdb
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Hammock.ClientProfile.pdb
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Newtonsoft.Json.pdb
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\bin\Debug\Newtonsoft.Json.xml
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\obj\Debug\CacheLibrary.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\obj\Debug\CacheLibrary.dll
+E:\work\Hangfire_service\HangfireService.Pro\CacheLibrary\obj\Debug\CacheLibrary.pdb

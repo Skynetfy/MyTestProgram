@@ -1,0 +1,7 @@
+E:\work\Hangfire_service\HangfireService.Pro\HZLogger.NLogWrapper\bin\Debug\HZLogger.NLogWrapper.dll
+E:\work\Hangfire_service\HangfireService.Pro\HZLogger.NLogWrapper\bin\Debug\HZLogger.NLogWrapper.pdb
+E:\work\Hangfire_service\HangfireService.Pro\HZLogger.NLogWrapper\bin\Debug\NLog.dll
+E:\work\Hangfire_service\HangfireService.Pro\HZLogger.NLogWrapper\bin\Debug\NLog.xml
+E:\work\Hangfire_service\HangfireService.Pro\HZLogger.NLogWrapper\obj\Debug\HZLogger.NLogWrapper.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\HZLogger.NLogWrapper\obj\Debug\HZLogger.NLogWrapper.dll
+E:\work\Hangfire_service\HangfireService.Pro\HZLogger.NLogWrapper\obj\Debug\HZLogger.NLogWrapper.pdb

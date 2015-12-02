@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="36039e07-7e7f-4883-a364-e345674117bf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://10.1.249.95:8099/Cache/HotelService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ff03eeed-c469-4123-a2e1-e9f77d196c1e" SourceId="1" SourceUrl="net.tcp://10.1.249.95:8099/Cache/HotelService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="2d593236-084c-4f5b-bd11-85c9b309a9d8" SourceId="1" SourceUrl="net.tcp://10.1.249.95:8099/Cache/HotelService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b4579b3a-fa85-43db-942d-eebefadbd2dc" SourceId="1" SourceUrl="net.tcp://10.1.249.95:8099/Cache/HotelService.svc/mex" />
+    <MetadataFile FileName="HZ.CentralGateway.Entity.Common.View1.xsd" MetadataType="Schema" ID="856343f4-f945-4d3a-8aab-d9b76ad44b7e" SourceId="1" SourceUrl="net.tcp://10.1.249.95:8099/Cache/HotelService.svc/mex" />
+    <MetadataFile FileName="HZ.CentralGateway.Entity.Common.xsd" MetadataType="Schema" ID="7690da05-b26f-4fc4-8f14-42ce80f20e45" SourceId="1" SourceUrl="net.tcp://10.1.249.95:8099/Cache/HotelService.svc/mex" />
+    <MetadataFile FileName="HZ.ReservationGateway.Common.Data.xsd" MetadataType="Schema" ID="669e85ae-2fa4-44b7-b556-333e5e8f6032" SourceId="1" SourceUrl="net.tcp://10.1.249.95:8099/Cache/HotelService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

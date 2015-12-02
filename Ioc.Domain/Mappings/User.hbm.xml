@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Ioc.Domain" namespace="Ioc.Domain.Entities">
+  <!--类的全称，程序集，数据库表名称-->
+  <class name="Ioc.Domain.Entities.User, Ioc.Domain" table="User">
+    <id name="ID" column="ID" type="int"  />
+    <property name="UserName" column="UserName" type="string"  />
+    <property name="Email" column="Email" type="string"  />
+    <property name="Password" column="Password" type="string"  />
+    <property name="AddedDate" column="AddedDate" type="datetime"  />
+    <property name="ModifiedDate" column="ModifiedDate" type="datetime"/>
+    <property name="IP" column="IP" type="string"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,10 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\bin\Debug\Ioc.WCFHost.exe.config
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\bin\Debug\Ioc.WCFHost.exe
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\bin\Debug\Ioc.WCFHost.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\bin\Debug\WsHttpBinding.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\bin\Debug\WsHttpBinding.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\obj\Debug\Ioc.WCFHost.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\obj\Debug\Ioc.WCFHost.exe
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\obj\Debug\Ioc.WCFHost.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\bin\Debug\Ioc.WCFMSMQ.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFHost\bin\Debug\Ioc.WCFMSMQ.pdb

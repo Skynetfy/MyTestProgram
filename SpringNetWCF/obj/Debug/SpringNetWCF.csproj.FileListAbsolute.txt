@@ -1,0 +1,6 @@
+E:\work\Hangfire_service\HangfireService.Pro\SpringNetWCF\bin\Debug\SpringNetWCF.exe.config
+E:\work\Hangfire_service\HangfireService.Pro\SpringNetWCF\bin\Debug\SpringNetWCF.exe
+E:\work\Hangfire_service\HangfireService.Pro\SpringNetWCF\bin\Debug\SpringNetWCF.pdb
+E:\work\Hangfire_service\HangfireService.Pro\SpringNetWCF\obj\Debug\SpringNetWCF.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\SpringNetWCF\obj\Debug\SpringNetWCF.exe
+E:\work\Hangfire_service\HangfireService.Pro\SpringNetWCF\obj\Debug\SpringNetWCF.pdb

@@ -1,0 +1,6 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFService\bin\Ioc.WCFService.dll.config
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFService\bin\Ioc.WCFService.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFService\bin\Ioc.WCFService.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFService\obj\Debug\Ioc.WCFService.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFService\obj\Debug\Ioc.WCFService.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFService\obj\Debug\Ioc.WCFService.pdb

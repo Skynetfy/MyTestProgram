@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AccorOTADBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccorOTADB.dbo.AccorDataPushHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AccorDataPushHistory">
+          <Key>
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="StartDate" />
+            <PropertyRef Name="EndDate" />
+            <PropertyRef Name="InvTypeCode" />
+            <PropertyRef Name="RatePlanCode" />
+            <PropertyRef Name="LocatorID" />
+            <PropertyRef Name="PushTime" />
+            <PropertyRef Name="SaveTime" />
+            <PropertyRef Name="LastModifiedTime" />
+            <PropertyRef Name="PushType" />
+          </Key>
+          <Property Name="HotelCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="InvTypeCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="RatePlanCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LocatorID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PushTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="SaveTime" Type="datetime" Nullable="false" />
+          <Property Name="ContextJson" Type="varchar(max)" />
+          <Property Name="LastModifiedTime" Type="datetime" Nullable="false" />
+          <Property Name="PushType" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CANPOL_Extract">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HotelID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Level" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="FromDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ToDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tue" Type="nvarchar" MaxLength="50" />
+          <Property Name="Wed" Type="nvarchar" MaxLength="50" />
+          <Property Name="Thu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fri" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sat" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sun" Type="nvarchar" MaxLength="50" />
+          <Property Name="Display" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nb brackets" Type="nvarchar" MaxLength="50" />
+          <Property Name="Forbidden" Type="nvarchar" MaxLength="50" />
+          <Property Name="FromDays" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToDays" Type="nvarchar" MaxLength="50" />
+          <Property Name="FromTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Penalty status" Type="nvarchar" MaxLength="200" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="200" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ModelPushLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ModelType" Type="varchar" MaxLength="50" />
+          <Property Name="PushType" Type="nvarchar" MaxLength="200" />
+          <Property Name="HotelID" Type="varchar" MaxLength="50" />
+          <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+          <Property Name="XmlContent" Type="text" />
+          <Property Name="Createdate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccorOTADB.dbo.OTA_HOD_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OTA_HOD_Info">
+          <Key>
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="HotelName" />
+            <PropertyRef Name="LastModifiedTime" />
+            <PropertyRef Name="BrandCode" />
+            <PropertyRef Name="BrandName" />
+            <PropertyRef Name="hotelStatus" />
+          </Key>
+          <Property Name="HotelCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HotelName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastModifiedTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BrandCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BrandName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="hotelStatus" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccorOTADB.dbo.OTA_HOD_RoomCode_Info' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OTA_HOD_RoomCode_Info">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="RoomCode" />
+            <PropertyRef Name="MaxOccupancy" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HotelCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="RoomCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaxOccupancy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OTA_HotelInfoHZToAccor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HZHotelId" Type="varchar" MaxLength="50" />
+          <Property Name="AccorHotelId" Type="varchar" MaxLength="50" />
+          <Property Name="HZRoomType" Type="varchar" MaxLength="50" />
+          <Property Name="AccorRoomType" Type="varchar" MaxLength="50" />
+          <Property Name="HZRate" Type="varchar" MaxLength="50" />
+          <Property Name="AccorRate" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OTA_RoomPriceDataCache">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HotelID" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="RoomType" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="HotelPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="MarketPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PriceCheck" Type="varchar(max)" Nullable="false" />
+          <Property Name="BizDate" Type="datetime" Nullable="false" />
+          <Property Name="HashPush" Type="bit" Nullable="false" />
+          <Property Name="LastModifyDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushCountData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+          <Property Name="EchoToken" Type="varchar" MaxLength="50" />
+          <Property Name="Target" Type="varchar" MaxLength="50" />
+          <Property Name="Version" Type="varchar" MaxLength="20" />
+          <Property Name="PrimaryLangID" Type="varchar" MaxLength="20" />
+          <Property Name="HotelCode" Type="varchar" MaxLength="50" />
+          <Property Name="LocatorID" Type="varchar" MaxLength="50" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="End" Type="datetime" />
+          <Property Name="IsRoom" Type="bit" />
+          <Property Name="InvTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="RatePlanCode" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushDataXmlResult">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PushType" Type="nvarchar" MaxLength="200" />
+          <Property Name="Content" Type="text" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushPriceData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+          <Property Name="EchoToken" Type="varchar" MaxLength="50" />
+          <Property Name="Target" Type="varchar" MaxLength="50" />
+          <Property Name="Version" Type="varchar" MaxLength="20" />
+          <Property Name="PrimaryLangID" Type="varchar" MaxLength="20" />
+          <Property Name="HotelCode" Type="varchar" MaxLength="50" />
+          <Property Name="LocatorID" Type="varchar" MaxLength="50" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="End" Type="datetime" />
+          <Property Name="IsRoom" Type="bit" />
+          <Property Name="InvTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="RatePlanCode" Type="varchar" MaxLength="50" />
+          <Property Name="NumberOfGuests" Type="int" />
+          <Property Name="CurrencyCode" Type="varchar" MaxLength="50" />
+          <Property Name="DecimalPlaces" Type="int" />
+          <Property Name="AmountBeforeTax" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AmountAfterTax" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MealPlanCodes" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccorOTADB.dbo.OTAAccorPushSalesAvailData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OTAAccorPushSalesAvailData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+          <Property Name="LocatorID" Type="varchar" MaxLength="50" />
+          <Property Name="EchoToken" Type="varchar" MaxLength="50" />
+          <Property Name="Target" Type="varchar" MaxLength="50" />
+          <Property Name="Version" Type="varchar" MaxLength="20" />
+          <Property Name="PrimaryLangID" Type="varchar" MaxLength="20" />
+          <Property Name="HotelCode" Type="varchar" MaxLength="50" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="End" Type="datetime" />
+          <Property Name="IsRoom" Type="bit" />
+          <Property Name="InvTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="RatePlanCode" Type="varchar" MaxLength="50" />
+          <Property Name="RatePlanCodeType" Type="varchar" MaxLength="50" />
+          <Property Name="InvCodeApplication" Type="varchar" MaxLength="50" />
+          <Property Name="BrandCode" Type="varchar" MaxLength="50" />
+          <Property Name="Mon" Type="bit" />
+          <Property Name="Tue" Type="bit" />
+          <Property Name="Weds" Type="bit" />
+          <Property Name="Thur" Type="bit" />
+          <Property Name="Fri" Type="bit" />
+          <Property Name="Sat" Type="bit" />
+          <Property Name="Sun" Type="bit" />
+          <Property Name="FixedPatternLength" Type="varchar" MaxLength="50" />
+          <Property Name="ArrivalDateBased" Type="bit" />
+          <Property Name="TimeUnit" Type="varchar" MaxLength="50" />
+          <Property Name="Time" Type="varchar" MaxLength="50" />
+          <Property Name="MinMaxMessageType" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushSalesBookingRuleData">
+          <Key>
+            <PropertyRef Name="D" />
+          </Key>
+          <Property Name="D" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="varchar" MaxLength="50" />
+          <Property Name="EchoToken" Type="varchar" MaxLength="50" />
+          <Property Name="Target" Type="varchar" MaxLength="50" />
+          <Property Name="Version" Type="varchar" MaxLength="20" />
+          <Property Name="PrimaryLangID" Type="varchar" MaxLength="20" />
+          <Property Name="HotelCode" Type="varchar" MaxLength="50" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="End" Type="datetime" />
+          <Property Name="IsRoom" Type="bit" />
+          <Property Name="InvTypeCode" Type="varchar" MaxLength="50" />
+          <Property Name="RatePlanCode" Type="varchar" MaxLength="50" />
+          <Property Name="BrandCode" Type="varchar" MaxLength="50" />
+          <Property Name="ChainCode" Type="varchar" MaxLength="50" />
+          <Property Name="Mon" Type="bit" />
+          <Property Name="Tue" Type="bit" />
+          <Property Name="Weds" Type="bit" />
+          <Property Name="Thur" Type="bit" />
+          <Property Name="Fri" Type="bit" />
+          <Property Name="Sat" Type="bit" />
+          <Property Name="Sun" Type="bit" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccorOTADB.dbo.OTAPushRedisResultInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OTAPushRedisResultInfo">
+          <Key>
+            <PropertyRef Name="HotelId" />
+          </Key>
+          <Property Name="HotelId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="PushType" Type="varchar" MaxLength="50" />
+          <Property Name="Content" Type="text" />
+          <Property Name="BackResult" Type="varchar" MaxLength="500" />
+          <Property Name="WorkTime" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PushLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="200" />
+          <Property Name="Content" Type="text" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccorOTADB.dbo.RoomCountDataCache' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="RoomCountDataCache">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="CheckInDate" />
+            <PropertyRef Name="HotelId" />
+            <PropertyRef Name="HasRoom" />
+            <PropertyRef Name="RoomTypeCode" />
+            <PropertyRef Name="HashPush" />
+            <PropertyRef Name="LastModifyDate" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="IsDel" />
+            <PropertyRef Name="SourceType" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CheckInDate" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="HotelId" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="HasRoom" Type="bit" Nullable="false" />
+          <Property Name="RoomTypeCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="HashPush" Type="bit" Nullable="false" />
+          <Property Name="LastModifyDate" Type="datetime" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+          <Property Name="SourceType" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AccorOTADB.dbo.V_CheckHotelInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="V_CheckHotelInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="RoomCode" />
+            <PropertyRef Name="MaxOccupancy" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="HotelCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="RoomCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="MaxOccupancy" Type="int" Nullable="false" />
+          <Property Name="HotelID" Type="varchar" MaxLength="50" />
+          <Property Name="RatePlanCode" Type="varchar" MaxLength="50" />
+          <Property Name="RoomTypeCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="AccorOTADBModelStoreContainer">
+          <EntitySet Name="CANPOL_Extract" EntityType="Self.CANPOL_Extract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ModelPushLog" EntityType="Self.ModelPushLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTA_HotelInfoHZToAccor" EntityType="Self.OTA_HotelInfoHZToAccor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTA_RoomPriceDataCache" EntityType="Self.OTA_RoomPriceDataCache" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTAAccorPushCountData" EntityType="Self.OTAAccorPushCountData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTAAccorPushDataXmlResult" EntityType="Self.OTAAccorPushDataXmlResult" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTAAccorPushPriceData" EntityType="Self.OTAAccorPushPriceData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTAAccorPushSalesBookingRuleData" EntityType="Self.OTAAccorPushSalesBookingRuleData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PushLog" EntityType="Self.PushLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccorDataPushHistory" EntityType="Self.AccorDataPushHistory" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AccorDataPushHistory].[HotelCode] AS [HotelCode], 
+    [AccorDataPushHistory].[StartDate] AS [StartDate], 
+    [AccorDataPushHistory].[EndDate] AS [EndDate], 
+    [AccorDataPushHistory].[InvTypeCode] AS [InvTypeCode], 
+    [AccorDataPushHistory].[RatePlanCode] AS [RatePlanCode], 
+    [AccorDataPushHistory].[LocatorID] AS [LocatorID], 
+    [AccorDataPushHistory].[PushTime] AS [PushTime], 
+    [AccorDataPushHistory].[SaveTime] AS [SaveTime], 
+    [AccorDataPushHistory].[ContextJson] AS [ContextJson], 
+    [AccorDataPushHistory].[LastModifiedTime] AS [LastModifiedTime], 
+    [AccorDataPushHistory].[PushType] AS [PushType]
+    FROM [dbo].[AccorDataPushHistory] AS [AccorDataPushHistory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OTA_HOD_Info" EntityType="Self.OTA_HOD_Info" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OTA_HOD_Info].[HotelCode] AS [HotelCode], 
+    [OTA_HOD_Info].[HotelName] AS [HotelName], 
+    [OTA_HOD_Info].[LastModifiedTime] AS [LastModifiedTime], 
+    [OTA_HOD_Info].[BrandCode] AS [BrandCode], 
+    [OTA_HOD_Info].[BrandName] AS [BrandName], 
+    [OTA_HOD_Info].[hotelStatus] AS [hotelStatus]
+    FROM [dbo].[OTA_HOD_Info] AS [OTA_HOD_Info]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OTA_HOD_RoomCode_Info" EntityType="Self.OTA_HOD_RoomCode_Info" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OTA_HOD_RoomCode_Info].[Id] AS [Id], 
+    [OTA_HOD_RoomCode_Info].[HotelCode] AS [HotelCode], 
+    [OTA_HOD_RoomCode_Info].[RoomCode] AS [RoomCode], 
+    [OTA_HOD_RoomCode_Info].[MaxOccupancy] AS [MaxOccupancy]
+    FROM [dbo].[OTA_HOD_RoomCode_Info] AS [OTA_HOD_RoomCode_Info]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OTAAccorPushSalesAvailData" EntityType="Self.OTAAccorPushSalesAvailData" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OTAAccorPushSalesAvailData].[ID] AS [ID], 
+    [OTAAccorPushSalesAvailData].[TimeStamp] AS [TimeStamp], 
+    [OTAAccorPushSalesAvailData].[LocatorID] AS [LocatorID], 
+    [OTAAccorPushSalesAvailData].[EchoToken] AS [EchoToken], 
+    [OTAAccorPushSalesAvailData].[Target] AS [Target], 
+    [OTAAccorPushSalesAvailData].[Version] AS [Version], 
+    [OTAAccorPushSalesAvailData].[PrimaryLangID] AS [PrimaryLangID], 
+    [OTAAccorPushSalesAvailData].[HotelCode] AS [HotelCode], 
+    [OTAAccorPushSalesAvailData].[Start] AS [Start], 
+    [OTAAccorPushSalesAvailData].[End] AS [End], 
+    [OTAAccorPushSalesAvailData].[IsRoom] AS [IsRoom], 
+    [OTAAccorPushSalesAvailData].[InvTypeCode] AS [InvTypeCode], 
+    [OTAAccorPushSalesAvailData].[RatePlanCode] AS [RatePlanCode], 
+    [OTAAccorPushSalesAvailData].[RatePlanCodeType] AS [RatePlanCodeType], 
+    [OTAAccorPushSalesAvailData].[InvCodeApplication] AS [InvCodeApplication], 
+    [OTAAccorPushSalesAvailData].[BrandCode] AS [BrandCode], 
+    [OTAAccorPushSalesAvailData].[Mon] AS [Mon], 
+    [OTAAccorPushSalesAvailData].[Tue] AS [Tue], 
+    [OTAAccorPushSalesAvailData].[Weds] AS [Weds], 
+    [OTAAccorPushSalesAvailData].[Thur] AS [Thur], 
+    [OTAAccorPushSalesAvailData].[Fri] AS [Fri], 
+    [OTAAccorPushSalesAvailData].[Sat] AS [Sat], 
+    [OTAAccorPushSalesAvailData].[Sun] AS [Sun], 
+    [OTAAccorPushSalesAvailData].[FixedPatternLength] AS [FixedPatternLength], 
+    [OTAAccorPushSalesAvailData].[ArrivalDateBased] AS [ArrivalDateBased], 
+    [OTAAccorPushSalesAvailData].[TimeUnit] AS [TimeUnit], 
+    [OTAAccorPushSalesAvailData].[Time] AS [Time], 
+    [OTAAccorPushSalesAvailData].[MinMaxMessageType] AS [MinMaxMessageType], 
+    [OTAAccorPushSalesAvailData].[CreateDate] AS [CreateDate]
+    FROM [dbo].[OTAAccorPushSalesAvailData] AS [OTAAccorPushSalesAvailData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OTAPushRedisResultInfo" EntityType="Self.OTAPushRedisResultInfo" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OTAPushRedisResultInfo].[HotelId] AS [HotelId], 
+    [OTAPushRedisResultInfo].[TimeStamp] AS [TimeStamp], 
+    [OTAPushRedisResultInfo].[PushType] AS [PushType], 
+    [OTAPushRedisResultInfo].[Content] AS [Content], 
+    [OTAPushRedisResultInfo].[BackResult] AS [BackResult], 
+    [OTAPushRedisResultInfo].[WorkTime] AS [WorkTime], 
+    [OTAPushRedisResultInfo].[CreateDate] AS [CreateDate]
+    FROM [dbo].[OTAPushRedisResultInfo] AS [OTAPushRedisResultInfo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="RoomCountDataCache" EntityType="Self.RoomCountDataCache" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [RoomCountDataCache].[ID] AS [ID], 
+    [RoomCountDataCache].[CheckInDate] AS [CheckInDate], 
+    [RoomCountDataCache].[HotelId] AS [HotelId], 
+    [RoomCountDataCache].[HasRoom] AS [HasRoom], 
+    [RoomCountDataCache].[RoomTypeCode] AS [RoomTypeCode], 
+    [RoomCountDataCache].[HashPush] AS [HashPush], 
+    [RoomCountDataCache].[LastModifyDate] AS [LastModifyDate], 
+    [RoomCountDataCache].[CreateDate] AS [CreateDate], 
+    [RoomCountDataCache].[IsDel] AS [IsDel], 
+    [RoomCountDataCache].[SourceType] AS [SourceType]
+    FROM [dbo].[RoomCountDataCache] AS [RoomCountDataCache]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_CheckHotelInfo" EntityType="Self.V_CheckHotelInfo" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [V_CheckHotelInfo].[Id] AS [Id], 
+    [V_CheckHotelInfo].[HotelCode] AS [HotelCode], 
+    [V_CheckHotelInfo].[RoomCode] AS [RoomCode], 
+    [V_CheckHotelInfo].[MaxOccupancy] AS [MaxOccupancy], 
+    [V_CheckHotelInfo].[HotelID] AS [HotelID], 
+    [V_CheckHotelInfo].[RatePlanCode] AS [RatePlanCode], 
+    [V_CheckHotelInfo].[RoomTypeCode] AS [RoomTypeCode]
+    FROM [dbo].[V_CheckHotelInfo] AS [V_CheckHotelInfo]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AccorOTADBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CANPOL_Extract">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HotelID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Level" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FromDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ToDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Wed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Thu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Display" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nb_brackets" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Forbidden" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FromDays" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ToDays" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FromTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ToTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Penalty_status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ModelPushLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ModelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PushType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="HotelID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="XmlContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Createdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="OTA_HotelInfoHZToAccor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HZHotelId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccorHotelId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HZRoomType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccorRoomType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HZRate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccorRate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="OTA_RoomPriceDataCache">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HotelID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoomType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HotelPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="MarketPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PriceCheck" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BizDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HashPush" Type="Boolean" Nullable="false" />
+          <Property Name="LastModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushCountData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="End" Type="DateTime" Precision="3" />
+          <Property Name="IsRoom" Type="Boolean" />
+          <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushDataXmlResult">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PushType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushPriceData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="End" Type="DateTime" Precision="3" />
+          <Property Name="IsRoom" Type="Boolean" />
+          <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumberOfGuests" Type="Int32" />
+          <Property Name="CurrencyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DecimalPlaces" Type="Int32" />
+          <Property Name="AmountBeforeTax" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AmountAfterTax" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MealPlanCodes" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushSalesBookingRuleData">
+          <Key>
+            <PropertyRef Name="D" />
+          </Key>
+          <Property Name="D" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="End" Type="DateTime" Precision="3" />
+          <Property Name="IsRoom" Type="Boolean" />
+          <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BrandCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChainCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mon" Type="Boolean" />
+          <Property Name="Tue" Type="Boolean" />
+          <Property Name="Weds" Type="Boolean" />
+          <Property Name="Thur" Type="Boolean" />
+          <Property Name="Fri" Type="Boolean" />
+          <Property Name="Sat" Type="Boolean" />
+          <Property Name="Sun" Type="Boolean" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PushLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="AccorDataPushHistory">
+          <Key>
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="StartDate" />
+            <PropertyRef Name="EndDate" />
+            <PropertyRef Name="InvTypeCode" />
+            <PropertyRef Name="RatePlanCode" />
+            <PropertyRef Name="LocatorID" />
+            <PropertyRef Name="PushTime" />
+            <PropertyRef Name="SaveTime" />
+            <PropertyRef Name="LastModifiedTime" />
+            <PropertyRef Name="PushType" />
+          </Key>
+          <Property Name="HotelCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="InvTypeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RatePlanCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PushTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="SaveTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ContextJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LastModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PushType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OTA_HOD_Info">
+          <Key>
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="HotelName" />
+            <PropertyRef Name="LastModifiedTime" />
+            <PropertyRef Name="BrandCode" />
+            <PropertyRef Name="BrandName" />
+            <PropertyRef Name="hotelStatus" />
+          </Key>
+          <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HotelName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastModifiedTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BrandCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hotelStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OTA_HOD_RoomCode_Info">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="RoomCode" />
+            <PropertyRef Name="MaxOccupancy" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HotelCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoomCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaxOccupancy" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OTAAccorPushSalesAvailData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="End" Type="DateTime" Precision="3" />
+          <Property Name="IsRoom" Type="Boolean" />
+          <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RatePlanCodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="InvCodeApplication" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BrandCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mon" Type="Boolean" />
+          <Property Name="Tue" Type="Boolean" />
+          <Property Name="Weds" Type="Boolean" />
+          <Property Name="Thur" Type="Boolean" />
+          <Property Name="Fri" Type="Boolean" />
+          <Property Name="Sat" Type="Boolean" />
+          <Property Name="Sun" Type="Boolean" />
+          <Property Name="FixedPatternLength" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ArrivalDateBased" Type="Boolean" />
+          <Property Name="TimeUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinMaxMessageType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="OTAPushRedisResultInfo">
+          <Key>
+            <PropertyRef Name="HotelId" />
+          </Key>
+          <Property Name="HotelId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="PushType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BackResult" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="WorkTime" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="RoomCountDataCache">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="CheckInDate" />
+            <PropertyRef Name="HotelId" />
+            <PropertyRef Name="HasRoom" />
+            <PropertyRef Name="RoomTypeCode" />
+            <PropertyRef Name="HashPush" />
+            <PropertyRef Name="LastModifyDate" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="IsDel" />
+            <PropertyRef Name="SourceType" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CheckInDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HotelId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HasRoom" Type="Boolean" Nullable="false" />
+          <Property Name="RoomTypeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HashPush" Type="Boolean" Nullable="false" />
+          <Property Name="LastModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+          <Property Name="SourceType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="V_CheckHotelInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="HotelCode" />
+            <PropertyRef Name="RoomCode" />
+            <PropertyRef Name="MaxOccupancy" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="HotelCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoomCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaxOccupancy" Type="Int32" Nullable="false" />
+          <Property Name="HotelID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RoomTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="AccorOTADBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CANPOL_Extract" EntityType="Self.CANPOL_Extract" />
+          <EntitySet Name="ModelPushLog" EntityType="Self.ModelPushLog" />
+          <EntitySet Name="OTA_HotelInfoHZToAccor" EntityType="Self.OTA_HotelInfoHZToAccor" />
+          <EntitySet Name="OTA_RoomPriceDataCache" EntityType="Self.OTA_RoomPriceDataCache" />
+          <EntitySet Name="OTAAccorPushCountData" EntityType="Self.OTAAccorPushCountData" />
+          <EntitySet Name="OTAAccorPushDataXmlResult" EntityType="Self.OTAAccorPushDataXmlResult" />
+          <EntitySet Name="OTAAccorPushPriceData" EntityType="Self.OTAAccorPushPriceData" />
+          <EntitySet Name="OTAAccorPushSalesBookingRuleData" EntityType="Self.OTAAccorPushSalesBookingRuleData" />
+          <EntitySet Name="PushLog" EntityType="Self.PushLog" />
+          <EntitySet Name="AccorDataPushHistory" EntityType="Self.AccorDataPushHistory" />
+          <EntitySet Name="OTA_HOD_Info" EntityType="Self.OTA_HOD_Info" />
+          <EntitySet Name="OTA_HOD_RoomCode_Info" EntityType="Self.OTA_HOD_RoomCode_Info" />
+          <EntitySet Name="OTAAccorPushSalesAvailData" EntityType="Self.OTAAccorPushSalesAvailData" />
+          <EntitySet Name="OTAPushRedisResultInfo" EntityType="Self.OTAPushRedisResultInfo" />
+          <EntitySet Name="RoomCountDataCache" EntityType="Self.RoomCountDataCache" />
+          <EntitySet Name="V_CheckHotelInfo" EntityType="Self.V_CheckHotelInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AccorOTADBModelStoreContainer" CdmEntityContainer="AccorOTADBEntities">
+          <EntitySetMapping Name="CANPOL_Extract">
+            <EntityTypeMapping TypeName="AccorOTADBModel.CANPOL_Extract">
+              <MappingFragment StoreEntitySet="CANPOL_Extract">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="Mon" ColumnName="Mon" />
+                <ScalarProperty Name="Tue" ColumnName="Tue" />
+                <ScalarProperty Name="Wed" ColumnName="Wed" />
+                <ScalarProperty Name="Thu" ColumnName="Thu" />
+                <ScalarProperty Name="Fri" ColumnName="Fri" />
+                <ScalarProperty Name="Sat" ColumnName="Sat" />
+                <ScalarProperty Name="Sun" ColumnName="Sun" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+                <ScalarProperty Name="Nb_brackets" ColumnName="Nb brackets" />
+                <ScalarProperty Name="Forbidden" ColumnName="Forbidden" />
+                <ScalarProperty Name="FromDays" ColumnName="FromDays" />
+                <ScalarProperty Name="ToDays" ColumnName="ToDays" />
+                <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+                <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+                <ScalarProperty Name="Penalty_status" ColumnName="Penalty status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ModelPushLog">
+            <EntityTypeMapping TypeName="AccorOTADBModel.ModelPushLog">
+              <MappingFragment StoreEntitySet="ModelPushLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ModelType" ColumnName="ModelType" />
+                <ScalarProperty Name="PushType" ColumnName="PushType" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="XmlContent" ColumnName="XmlContent" />
+                <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTA_HotelInfoHZToAccor">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTA_HotelInfoHZToAccor">
+              <MappingFragment StoreEntitySet="OTA_HotelInfoHZToAccor">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HZHotelId" ColumnName="HZHotelId" />
+                <ScalarProperty Name="AccorHotelId" ColumnName="AccorHotelId" />
+                <ScalarProperty Name="HZRoomType" ColumnName="HZRoomType" />
+                <ScalarProperty Name="AccorRoomType" ColumnName="AccorRoomType" />
+                <ScalarProperty Name="HZRate" ColumnName="HZRate" />
+                <ScalarProperty Name="AccorRate" ColumnName="AccorRate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTA_RoomPriceDataCache">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTA_RoomPriceDataCache">
+              <MappingFragment StoreEntitySet="OTA_RoomPriceDataCache">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+                <ScalarProperty Name="HotelPrice" ColumnName="HotelPrice" />
+                <ScalarProperty Name="MarketPrice" ColumnName="MarketPrice" />
+                <ScalarProperty Name="PriceCheck" ColumnName="PriceCheck" />
+                <ScalarProperty Name="BizDate" ColumnName="BizDate" />
+                <ScalarProperty Name="HashPush" ColumnName="HashPush" />
+                <ScalarProperty Name="LastModifyDate" ColumnName="LastModifyDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTAAccorPushCountData">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTAAccorPushCountData">
+              <MappingFragment StoreEntitySet="OTAAccorPushCountData">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="EchoToken" ColumnName="EchoToken" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="PrimaryLangID" ColumnName="PrimaryLangID" />
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="LocatorID" ColumnName="LocatorID" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="IsRoom" ColumnName="IsRoom" />
+                <ScalarProperty Name="InvTypeCode" ColumnName="InvTypeCode" />
+                <ScalarProperty Name="RatePlanCode" ColumnName="RatePlanCode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTAAccorPushDataXmlResult">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTAAccorPushDataXmlResult">
+              <MappingFragment StoreEntitySet="OTAAccorPushDataXmlResult">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PushType" ColumnName="PushType" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTAAccorPushPriceData">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTAAccorPushPriceData">
+              <MappingFragment StoreEntitySet="OTAAccorPushPriceData">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="EchoToken" ColumnName="EchoToken" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="PrimaryLangID" ColumnName="PrimaryLangID" />
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="LocatorID" ColumnName="LocatorID" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="IsRoom" ColumnName="IsRoom" />
+                <ScalarProperty Name="InvTypeCode" ColumnName="InvTypeCode" />
+                <ScalarProperty Name="RatePlanCode" ColumnName="RatePlanCode" />
+                <ScalarProperty Name="NumberOfGuests" ColumnName="NumberOfGuests" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="DecimalPlaces" ColumnName="DecimalPlaces" />
+                <ScalarProperty Name="AmountBeforeTax" ColumnName="AmountBeforeTax" />
+                <ScalarProperty Name="AmountAfterTax" ColumnName="AmountAfterTax" />
+                <ScalarProperty Name="MealPlanCodes" ColumnName="MealPlanCodes" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTAAccorPushSalesBookingRuleData">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTAAccorPushSalesBookingRuleData">
+              <MappingFragment StoreEntitySet="OTAAccorPushSalesBookingRuleData">
+                <ScalarProperty Name="D" ColumnName="D" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="EchoToken" ColumnName="EchoToken" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="PrimaryLangID" ColumnName="PrimaryLangID" />
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="IsRoom" ColumnName="IsRoom" />
+                <ScalarProperty Name="InvTypeCode" ColumnName="InvTypeCode" />
+                <ScalarProperty Name="RatePlanCode" ColumnName="RatePlanCode" />
+                <ScalarProperty Name="BrandCode" ColumnName="BrandCode" />
+                <ScalarProperty Name="ChainCode" ColumnName="ChainCode" />
+                <ScalarProperty Name="Mon" ColumnName="Mon" />
+                <ScalarProperty Name="Tue" ColumnName="Tue" />
+                <ScalarProperty Name="Weds" ColumnName="Weds" />
+                <ScalarProperty Name="Thur" ColumnName="Thur" />
+                <ScalarProperty Name="Fri" ColumnName="Fri" />
+                <ScalarProperty Name="Sat" ColumnName="Sat" />
+                <ScalarProperty Name="Sun" ColumnName="Sun" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PushLog">
+            <EntityTypeMapping TypeName="AccorOTADBModel.PushLog">
+              <MappingFragment StoreEntitySet="PushLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccorDataPushHistory">
+            <EntityTypeMapping TypeName="AccorOTADBModel.AccorDataPushHistory">
+              <MappingFragment StoreEntitySet="AccorDataPushHistory">
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="InvTypeCode" ColumnName="InvTypeCode" />
+                <ScalarProperty Name="RatePlanCode" ColumnName="RatePlanCode" />
+                <ScalarProperty Name="LocatorID" ColumnName="LocatorID" />
+                <ScalarProperty Name="PushTime" ColumnName="PushTime" />
+                <ScalarProperty Name="SaveTime" ColumnName="SaveTime" />
+                <ScalarProperty Name="ContextJson" ColumnName="ContextJson" />
+                <ScalarProperty Name="LastModifiedTime" ColumnName="LastModifiedTime" />
+                <ScalarProperty Name="PushType" ColumnName="PushType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTA_HOD_Info">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTA_HOD_Info">
+              <MappingFragment StoreEntitySet="OTA_HOD_Info">
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+                <ScalarProperty Name="LastModifiedTime" ColumnName="LastModifiedTime" />
+                <ScalarProperty Name="BrandCode" ColumnName="BrandCode" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="hotelStatus" ColumnName="hotelStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTA_HOD_RoomCode_Info">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTA_HOD_RoomCode_Info">
+              <MappingFragment StoreEntitySet="OTA_HOD_RoomCode_Info">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="RoomCode" ColumnName="RoomCode" />
+                <ScalarProperty Name="MaxOccupancy" ColumnName="MaxOccupancy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTAAccorPushSalesAvailData">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTAAccorPushSalesAvailData">
+              <MappingFragment StoreEntitySet="OTAAccorPushSalesAvailData">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="LocatorID" ColumnName="LocatorID" />
+                <ScalarProperty Name="EchoToken" ColumnName="EchoToken" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="PrimaryLangID" ColumnName="PrimaryLangID" />
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="IsRoom" ColumnName="IsRoom" />
+                <ScalarProperty Name="InvTypeCode" ColumnName="InvTypeCode" />
+                <ScalarProperty Name="RatePlanCode" ColumnName="RatePlanCode" />
+                <ScalarProperty Name="RatePlanCodeType" ColumnName="RatePlanCodeType" />
+                <ScalarProperty Name="InvCodeApplication" ColumnName="InvCodeApplication" />
+                <ScalarProperty Name="BrandCode" ColumnName="BrandCode" />
+                <ScalarProperty Name="Mon" ColumnName="Mon" />
+                <ScalarProperty Name="Tue" ColumnName="Tue" />
+                <ScalarProperty Name="Weds" ColumnName="Weds" />
+                <ScalarProperty Name="Thur" ColumnName="Thur" />
+                <ScalarProperty Name="Fri" ColumnName="Fri" />
+                <ScalarProperty Name="Sat" ColumnName="Sat" />
+                <ScalarProperty Name="Sun" ColumnName="Sun" />
+                <ScalarProperty Name="FixedPatternLength" ColumnName="FixedPatternLength" />
+                <ScalarProperty Name="ArrivalDateBased" ColumnName="ArrivalDateBased" />
+                <ScalarProperty Name="TimeUnit" ColumnName="TimeUnit" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="MinMaxMessageType" ColumnName="MinMaxMessageType" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTAPushRedisResultInfo">
+            <EntityTypeMapping TypeName="AccorOTADBModel.OTAPushRedisResultInfo">
+              <MappingFragment StoreEntitySet="OTAPushRedisResultInfo">
+                <ScalarProperty Name="HotelId" ColumnName="HotelId" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="PushType" ColumnName="PushType" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="BackResult" ColumnName="BackResult" />
+                <ScalarProperty Name="WorkTime" ColumnName="WorkTime" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoomCountDataCache">
+            <EntityTypeMapping TypeName="AccorOTADBModel.RoomCountDataCache">
+              <MappingFragment StoreEntitySet="RoomCountDataCache">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+                <ScalarProperty Name="HotelId" ColumnName="HotelId" />
+                <ScalarProperty Name="HasRoom" ColumnName="HasRoom" />
+                <ScalarProperty Name="RoomTypeCode" ColumnName="RoomTypeCode" />
+                <ScalarProperty Name="HashPush" ColumnName="HashPush" />
+                <ScalarProperty Name="LastModifyDate" ColumnName="LastModifyDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_CheckHotelInfo">
+            <EntityTypeMapping TypeName="AccorOTADBModel.V_CheckHotelInfo">
+              <MappingFragment StoreEntitySet="V_CheckHotelInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HotelCode" ColumnName="HotelCode" />
+                <ScalarProperty Name="RoomCode" ColumnName="RoomCode" />
+                <ScalarProperty Name="MaxOccupancy" ColumnName="MaxOccupancy" />
+                <ScalarProperty Name="HotelID" ColumnName="HotelID" />
+                <ScalarProperty Name="RatePlanCode" ColumnName="RatePlanCode" />
+                <ScalarProperty Name="RoomTypeCode" ColumnName="RoomTypeCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

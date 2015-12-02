@@ -1,0 +1,10 @@
+E:\work\Hangfire_service\HangfireService.Pro\Host\bin\Debug\Host.exe.config
+E:\work\Hangfire_service\HangfireService.Pro\Host\bin\Debug\Host.exe
+E:\work\Hangfire_service\HangfireService.Pro\Host\bin\Debug\Host.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Host\bin\Debug\Contracts.dll
+E:\work\Hangfire_service\HangfireService.Pro\Host\bin\Debug\Services.dll
+E:\work\Hangfire_service\HangfireService.Pro\Host\bin\Debug\Contracts.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Host\bin\Debug\Services.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Host\obj\Debug\Host.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Host\obj\Debug\Host.exe
+E:\work\Hangfire_service\HangfireService.Pro\Host\obj\Debug\Host.pdb

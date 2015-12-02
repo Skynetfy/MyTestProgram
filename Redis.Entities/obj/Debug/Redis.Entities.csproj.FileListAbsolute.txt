@@ -1,0 +1,5 @@
+E:\work\Hangfire_service\HangfireService.Pro\Redis.Entities\bin\Debug\Redis.Entities.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.Entities\bin\Debug\Redis.Entities.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Redis.Entities\obj\Debug\Redis.Entities.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Redis.Entities\obj\Debug\Redis.Entities.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.Entities\obj\Debug\Redis.Entities.pdb

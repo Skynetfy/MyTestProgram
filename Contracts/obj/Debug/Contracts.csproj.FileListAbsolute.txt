@@ -1,0 +1,5 @@
+E:\work\Hangfire_service\HangfireService.Pro\Contracts\bin\Debug\Contracts.dll
+E:\work\Hangfire_service\HangfireService.Pro\Contracts\bin\Debug\Contracts.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Contracts\obj\Debug\Contracts.dll
+E:\work\Hangfire_service\HangfireService.Pro\Contracts\obj\Debug\Contracts.pdb

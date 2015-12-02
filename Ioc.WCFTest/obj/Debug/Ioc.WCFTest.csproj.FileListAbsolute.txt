@@ -1,0 +1,9 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\bin\Debug\Ioc.WCFTest.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\bin\Debug\Ioc.WCFTest.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\bin\Debug\Ioc.WCFHost.exe
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\bin\Debug\WsHttpBinding.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\bin\Debug\Ioc.WCFHost.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\bin\Debug\WsHttpBinding.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\obj\Debug\Ioc.WCFTest.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\obj\Debug\Ioc.WCFTest.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFTest\obj\Debug\Ioc.WCFTest.pdb

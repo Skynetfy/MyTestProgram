@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hub</title>
+</head>
+<body>
+    <ul id="chat"></ul>
+    <button id="sayHello">发送</button>
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/realtime/signalr/js"></script>
+    <script type="text/javascript">
+        $(function() {
+            //创建一个hub服务
+            var hub = $.connection.myFirstHub;
+            $.connection.hub.start()
+                .done(function() {
+                    alert("连接成功!");
+                })
+                .fail(function() {
+                    alert("连接失败!");
+                });
+            hub.client.hello = function(name) {
+                $('#chat').append('<li><strong>' + name + '</strong>:Hi!</li>');
+            }
+            $("#sayHello").click(function() {
+                console.log(1);
+                hub.server.hello("Jack");
+                console.log(2);
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //创建一个hub服务
+            var hub = $.connection.MyHub2;
+            $.connection.hub.start()
+                .done(function () {
+                    alert("连接成功!");
+                })
+            $("#sayHello").click(function () {
+                hub.server.sendMessageByUserName("Jake");
+            });
+            hub.client.sendMessageByUserName = function (userName) {
+                alert(userName);
+            };
+        });
+    </script>
+
+</body>
+</html>

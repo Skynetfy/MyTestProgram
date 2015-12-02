@@ -1,0 +1,5 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Core\bin\Debug\Ioc.Core.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Core\bin\Debug\Ioc.Core.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Core\obj\Debug\Ioc.Core.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Core\obj\Debug\Ioc.Core.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Core\obj\Debug\Ioc.Core.pdb

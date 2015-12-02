@@ -1,0 +1,16 @@
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\Redis.DAL.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\Redis.DAL.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\Redis.Entities.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\Redis.IDAL.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\ServiceStack.Common.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\ServiceStack.Interfaces.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\ServiceStack.Redis.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\ServiceStack.Text.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\Redis.Entities.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\Redis.IDAL.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\ServiceStack.Common.xml
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\ServiceStack.Redis.xml
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\bin\Debug\ServiceStack.Text.xml
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\obj\Debug\Redis.DAL.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\obj\Debug\Redis.DAL.dll
+E:\work\Hangfire_service\HangfireService.Pro\Redis.DAL\obj\Debug\Redis.DAL.pdb

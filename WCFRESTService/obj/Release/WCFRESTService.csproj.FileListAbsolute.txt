@@ -1,0 +1,10 @@
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\bin\WCFRESTService.dll.config
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\bin\WCFRESTService.dll
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\bin\WCFRESTService.pdb
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\bin\EntityFramework.dll
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\bin\EntityFramework.SqlServer.dll
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\bin\EntityFramework.xml
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\bin\EntityFramework.SqlServer.xml
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\obj\Release\WCFRESTService.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\obj\Release\WCFRESTService.dll
+E:\work\Hangfire_service\HangfireService.Pro\WCFRESTService\obj\Release\WCFRESTService.pdb

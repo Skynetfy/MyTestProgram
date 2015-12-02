@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AccorOTADBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CANPOL_Extract">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HotelID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Level" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FromDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ToDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Wed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Thu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Display" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nb_brackets" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Forbidden" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FromDays" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ToDays" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FromTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ToTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Penalty_status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ModelPushLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PushType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="HotelID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="XmlContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OTA_HotelInfoHZToAccor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HZHotelId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccorHotelId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HZRoomType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccorRoomType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HZRate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccorRate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OTA_RoomPriceDataCache">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HotelID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoomType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HotelPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MarketPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PriceCheck" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BizDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="HashPush" Type="Boolean" Nullable="false" />
+    <Property Name="LastModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OTAAccorPushCountData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Start" Type="DateTime" Precision="3" />
+    <Property Name="End" Type="DateTime" Precision="3" />
+    <Property Name="IsRoom" Type="Boolean" />
+    <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OTAAccorPushDataXmlResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PushType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OTAAccorPushPriceData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Start" Type="DateTime" Precision="3" />
+    <Property Name="End" Type="DateTime" Precision="3" />
+    <Property Name="IsRoom" Type="Boolean" />
+    <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NumberOfGuests" Type="Int32" />
+    <Property Name="CurrencyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DecimalPlaces" Type="Int32" />
+    <Property Name="AmountBeforeTax" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AmountAfterTax" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MealPlanCodes" Type="Int32" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OTAAccorPushSalesBookingRuleData">
+    <Key>
+      <PropertyRef Name="D" />
+    </Key>
+    <Property Name="D" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Start" Type="DateTime" Precision="3" />
+    <Property Name="End" Type="DateTime" Precision="3" />
+    <Property Name="IsRoom" Type="Boolean" />
+    <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BrandCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChainCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mon" Type="Boolean" />
+    <Property Name="Tue" Type="Boolean" />
+    <Property Name="Weds" Type="Boolean" />
+    <Property Name="Thur" Type="Boolean" />
+    <Property Name="Fri" Type="Boolean" />
+    <Property Name="Sat" Type="Boolean" />
+    <Property Name="Sun" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PushLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="AccorDataPushHistory">
+    <Key>
+      <PropertyRef Name="HotelCode" />
+      <PropertyRef Name="StartDate" />
+      <PropertyRef Name="EndDate" />
+      <PropertyRef Name="InvTypeCode" />
+      <PropertyRef Name="RatePlanCode" />
+      <PropertyRef Name="LocatorID" />
+      <PropertyRef Name="PushTime" />
+      <PropertyRef Name="SaveTime" />
+      <PropertyRef Name="LastModifiedTime" />
+      <PropertyRef Name="PushType" />
+    </Key>
+    <Property Name="HotelCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InvTypeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RatePlanCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PushTime" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="SaveTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ContextJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PushType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OTA_HOD_Info">
+    <Key>
+      <PropertyRef Name="HotelCode" />
+      <PropertyRef Name="HotelName" />
+      <PropertyRef Name="LastModifiedTime" />
+      <PropertyRef Name="BrandCode" />
+      <PropertyRef Name="BrandName" />
+      <PropertyRef Name="hotelStatus" />
+    </Key>
+    <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HotelName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastModifiedTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="hotelStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OTA_HOD_RoomCode_Info">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="HotelCode" />
+      <PropertyRef Name="RoomCode" />
+      <PropertyRef Name="MaxOccupancy" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HotelCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoomCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaxOccupancy" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OTAAccorPushSalesAvailData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocatorID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EchoToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryLangID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HotelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Start" Type="DateTime" Precision="3" />
+    <Property Name="End" Type="DateTime" Precision="3" />
+    <Property Name="IsRoom" Type="Boolean" />
+    <Property Name="InvTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RatePlanCodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvCodeApplication" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BrandCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mon" Type="Boolean" />
+    <Property Name="Tue" Type="Boolean" />
+    <Property Name="Weds" Type="Boolean" />
+    <Property Name="Thur" Type="Boolean" />
+    <Property Name="Fri" Type="Boolean" />
+    <Property Name="Sat" Type="Boolean" />
+    <Property Name="Sun" Type="Boolean" />
+    <Property Name="FixedPatternLength" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArrivalDateBased" Type="Boolean" />
+    <Property Name="TimeUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MinMaxMessageType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OTAPushRedisResultInfo">
+    <Key>
+      <PropertyRef Name="HotelId" />
+    </Key>
+    <Property Name="HotelId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="PushType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BackResult" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="WorkTime" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RoomCountDataCache">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CheckInDate" />
+      <PropertyRef Name="HotelId" />
+      <PropertyRef Name="HasRoom" />
+      <PropertyRef Name="RoomTypeCode" />
+      <PropertyRef Name="HashPush" />
+      <PropertyRef Name="LastModifyDate" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="IsDel" />
+      <PropertyRef Name="SourceType" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CheckInDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HotelId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HasRoom" Type="Boolean" Nullable="false" />
+    <Property Name="RoomTypeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HashPush" Type="Boolean" Nullable="false" />
+    <Property Name="LastModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDel" Type="Boolean" Nullable="false" />
+    <Property Name="SourceType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="V_CheckHotelInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="HotelCode" />
+      <PropertyRef Name="RoomCode" />
+      <PropertyRef Name="MaxOccupancy" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="HotelCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoomCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaxOccupancy" Type="Int32" Nullable="false" />
+    <Property Name="HotelID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RatePlanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoomTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="AccorOTADBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CANPOL_Extract" EntityType="Self.CANPOL_Extract" />
+    <EntitySet Name="ModelPushLog" EntityType="Self.ModelPushLog" />
+    <EntitySet Name="OTA_HotelInfoHZToAccor" EntityType="Self.OTA_HotelInfoHZToAccor" />
+    <EntitySet Name="OTA_RoomPriceDataCache" EntityType="Self.OTA_RoomPriceDataCache" />
+    <EntitySet Name="OTAAccorPushCountData" EntityType="Self.OTAAccorPushCountData" />
+    <EntitySet Name="OTAAccorPushDataXmlResult" EntityType="Self.OTAAccorPushDataXmlResult" />
+    <EntitySet Name="OTAAccorPushPriceData" EntityType="Self.OTAAccorPushPriceData" />
+    <EntitySet Name="OTAAccorPushSalesBookingRuleData" EntityType="Self.OTAAccorPushSalesBookingRuleData" />
+    <EntitySet Name="PushLog" EntityType="Self.PushLog" />
+    <EntitySet Name="AccorDataPushHistory" EntityType="Self.AccorDataPushHistory" />
+    <EntitySet Name="OTA_HOD_Info" EntityType="Self.OTA_HOD_Info" />
+    <EntitySet Name="OTA_HOD_RoomCode_Info" EntityType="Self.OTA_HOD_RoomCode_Info" />
+    <EntitySet Name="OTAAccorPushSalesAvailData" EntityType="Self.OTAAccorPushSalesAvailData" />
+    <EntitySet Name="OTAPushRedisResultInfo" EntityType="Self.OTAPushRedisResultInfo" />
+    <EntitySet Name="RoomCountDataCache" EntityType="Self.RoomCountDataCache" />
+    <EntitySet Name="V_CheckHotelInfo" EntityType="Self.V_CheckHotelInfo" />
+  </EntityContainer>
+</Schema>

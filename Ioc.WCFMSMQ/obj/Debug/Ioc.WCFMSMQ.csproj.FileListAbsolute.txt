@@ -1,0 +1,5 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFMSMQ\bin\Debug\Ioc.WCFMSMQ.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFMSMQ\bin\Debug\Ioc.WCFMSMQ.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFMSMQ\obj\Debug\Ioc.WCFMSMQ.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFMSMQ\obj\Debug\Ioc.WCFMSMQ.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.WCFMSMQ\obj\Debug\Ioc.WCFMSMQ.pdb

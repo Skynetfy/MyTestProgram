@@ -1,0 +1,15 @@
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Ioc.Spring.Net.App.exe.config
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Ioc.Spring.Net.App.exe
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Ioc.Spring.Net.App.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Common.Logging.Core.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Common.Logging.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Spring.Aop.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Spring.Core.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Spring.Data.dll
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Common.Logging.Core.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Common.Logging.Core.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Spring.Aop.pdb
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\bin\Debug\Spring.Aop.xml
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\obj\Debug\Ioc.Spring.Net.App.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\obj\Debug\Ioc.Spring.Net.App.exe
+E:\work\Hangfire_service\HangfireService.Pro\Ioc.Spring.Net.App\obj\Debug\Ioc.Spring.Net.App.pdb

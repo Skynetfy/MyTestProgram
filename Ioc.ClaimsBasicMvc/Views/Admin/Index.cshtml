@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Blank</h1>
+            <table id="table"
+                   data-toggle="table"
+                   data-url="@Url.Action("GetJson", "RoomPriceData")"
+                   data-height="400"
+                   data-side-pagination="server"
+                   data-pagination="true"
+                   data-page-list="[10, 20, 50, 100, 200]"
+                   data-search="true"
+                   data-content-type="application/json">
+                <thead>
+                    <tr>
+                        <th data-field="state" data-checkbox="true"></th>
+                        <th data-field="ID">ID</th>
+                        @*<th data-field="name">name</th>*@
+                        <th data-field="HotelID" data-sortable="true">HotelID</th>
+                        <th data-field="RoomType" data-sortable="true">RoomType</th>
+                        <th data-field="HotelPrice" data-sortable="true">HotelPrice</th>
+                        <th data-field="MarketPrice" data-sortable="true">MarketPrice</th>
+                        <th data-field="BizDate" data-sortable="true">BizDate</th>
+                        <th data-field="LastModifyDate" data-sortable="true">LastModifyDate</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
+

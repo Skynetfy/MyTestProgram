@@ -1,0 +1,5 @@
+E:\work\Hangfire_service\HangfireService.Pro\WsHttpBinding\bin\Debug\WsHttpBinding.dll
+E:\work\Hangfire_service\HangfireService.Pro\WsHttpBinding\bin\Debug\WsHttpBinding.pdb
+E:\work\Hangfire_service\HangfireService.Pro\WsHttpBinding\obj\Debug\WsHttpBinding.csprojResolveAssemblyReference.cache
+E:\work\Hangfire_service\HangfireService.Pro\WsHttpBinding\obj\Debug\WsHttpBinding.dll
+E:\work\Hangfire_service\HangfireService.Pro\WsHttpBinding\obj\Debug\WsHttpBinding.pdb
